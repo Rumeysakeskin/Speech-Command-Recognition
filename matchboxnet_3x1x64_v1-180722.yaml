@@ -9,7 +9,7 @@ model:
 
   labels_full: ['bed', 'bird', 'cat', 'dog', 'down', 'eight', 'five', 'four', 'go', 'happy', 'house', 'left', 'marvin',
            'nine', 'no', 'off', 'on', 'one', 'right', 'seven', 'sheila', 'six', 'stop', 'three', 'tree', 'two', 'up',
-           'wow', 'yes', 'zero', 'HeyArci', 'baslat', 'hersey']
+           'wow', 'yes', 'zero', 'label1']
 
   labels_subset: ["yes", "no", "up", "down", "left", "right", "on", "off", "stop", "go", "unknown", "silence"]
 
