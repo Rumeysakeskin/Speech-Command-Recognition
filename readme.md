@@ -11,10 +11,12 @@ Labels were configured in `config/matchboxnet_3x1x64_v1.yaml` in the following f
            'wow', 'yes', 'zero', 'label1', 'label2', 'label3']
 ```
 ### Training
+- For training run the following command. Checkpoints `.ckpt` will be saved `checkpoints/` after every epoch.
 ```
 training.py
 ```
 ### Load and Export onnx model to Inference
+- You can create `.onnx` model from your best `.ckpt` file. 
 ```
 export_model.ipynb
 ```
