@@ -2,7 +2,7 @@
 
 ### Table Of Contents
 - [Configuration Preprocessing](#Configuration-Preprocessing)
-- [Custom Speech Classification Data Preparing](#Custom Speech Classification Data Preparing)
+- [Custom Speech Classification Data Preparing](#Custom-Speech-Classification-Data-Preparing)
 - [Speech Data Augmentation](#Speech-Data-Augmentation)
 - [Training](#Training)
 - [Export to ONNX Model](#Export-to-ONNX-Model)
