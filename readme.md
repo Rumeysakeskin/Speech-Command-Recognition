@@ -1,5 +1,13 @@
 ## Speech-Command-Recognition/Key Word Spotting
 
+### Table Of Contents
+- [Configuration Preprocessing](#Configuration-Preprocessing)
+- [Custom Speech Classification Data Preparing](#Custom Speech Classification Data Preparing)
+- [Speech Data Augmentation](#Speech-Data-Augmentation)
+- [Training](#Training)
+- [Export to ONNX Model](#Export-to-ONNX-Model)
+- [Deploy and Inference](#Deploy-and-Inference)
+
 ### Configuration Preprocessing
 - NeMo [Matchboxnet_3x1x64_v1](https://github.com/NVIDIA/NeMo/tree/main/examples/asr/conf/matchboxnet) configurations was used.
 - Also, you can use other [Nemo ASR configurations](https://github.com/NVIDIA/NeMo/tree/main/examples/asr/conf).
@@ -11,7 +19,7 @@ Labels were configured in `config/matchboxnet_3x1x64_v1.yaml` in the following f
            'wow', 'yes', 'zero', 'label1', 'label2', 'label3']
 ```
 
-### Preparing Custom Speech Classification Data
+### Custom Speech Classification Data Preparing
 - The `nemo_asr` collection expects each dataset to consist of a set of utterances in individual audio files plus a manifest that describes the dataset, with information about one utterance per line `(.json)`.
 - Each line of the manifest `(manifest_files/train_manifest.jsonl and manifest_files/val_manifest.jsonl)` should be in the following format:
 ```
@@ -37,7 +45,7 @@ trainer = pl.Trainer(gpus=2, max_epochs=200, amp_level='O1', precision=16,
                        accumulate_grad_batches=1, checkpoint_callback=checkpoint_callback, val_check_interval=1.0,
                        logger=wandb_logger, log_every_n_steps=100)
 ```
-### Load and Export onnx model
+### Export to ONNX Model
 - You can create `.onnx` model from your best `.ckpt` file. 
 ```
 export_model.ipynb
