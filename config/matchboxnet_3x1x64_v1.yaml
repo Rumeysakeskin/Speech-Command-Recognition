@@ -172,6 +172,8 @@ trainer:
   log_every_n_steps: 1  # Interval of logging.
   val_check_interval: 1.0  # Set to 0.25 to check 4 times per epoch, or an int for number of iterations
 
+model_path: ./model/classification_model.onnx
+
 exp_manager:
   exp_dir: null
   name: *name
